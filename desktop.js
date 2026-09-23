@@ -1886,7 +1886,7 @@
   .std-services-kicker{margin:0!important;color:#9b7d72!important;font-size:12px!important;font-weight:600!important;letter-spacing:.24em!important;text-transform:uppercase!important}
   .std-services-title{margin:12px 0 0!important;color:#171513!important;font:500 clamp(64px,5.6vw,82px)/.90 "Cormorant Garamond",Georgia,serif!important;letter-spacing:-.045em!important}
   .std-services-intro{max-width:540px!important;margin:0 0 7px!important;color:#625b57!important;font-size:14px!important;line-height:1.7!important}
-  .std-price-legacy{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important}
+  .std-price-hidden{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important}
   .std-services-right{width:100%!important}
   .std-service-tabs{
     width:100%!important;
@@ -2117,7 +2117,7 @@
   .std-services-head-ref{display:grid!important;grid-template-columns:minmax(340px,.88fr) minmax(360px,1.12fr)!important;align-items:end!important;gap:68px!important}
   .std-services-kicker{color:#b8ada7!important}.std-services-title{color:#f7f3f0!important}
   .std-services-intro{max-width:570px!important;margin:0 0 5px!important;color:#b9ada7!important;font-size:15px!important;line-height:1.65!important}
-  .std-price-legacy{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important}
+  .std-price-hidden{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important}
   .std-service-tabs{width:100%!important;margin:34px 0 0!important;padding:0 0 8px!important;display:flex!important;gap:8px!important;
     overflow-x:auto!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;
     -webkit-mask-image:none!important;mask-image:none!important}
