@@ -7415,7 +7415,7 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
       </div>
 
       <div class="std-hero-photo">
-        <video id="stdHeroVideo" muted autoplay loop playsinline webkit-playsinline preload="metadata" poster="media-placeholder.svg" aria-label="Медиа салона"></video>
+        <img id="stdHeroMedia" src="media-placeholder.svg" alt="Медиа салона">
       </div>
     </section>
 
@@ -7667,8 +7667,8 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
         <p class="std-services-kicker">Запись</p><h3>Как вам удобнее записаться?</h3><p>Выберите удобный способ связи.</p>
         <div class="std-book-options">
           <a href="#visit" aria-disabled="true"><span>Телефон</span><span>Телефон салона →</span></a>
-          <a href="#"><span>Мессенджер</span><span>Написать →</span></a>
-          <a href="#" target="_blank" rel="noopener"><span>Google Maps</span><span>Открыть →</span></a>
+          <a href="#esmeraldaDesktopContacts" aria-disabled="true"><span>Мессенджер</span><span>Будет добавлен →</span></a>
+          <a href="#esmeraldaDesktopContacts" aria-disabled="true"><span>Google Maps</span><span>Будет добавлено →</span></a>
         </div>
       </div>
     </div>
