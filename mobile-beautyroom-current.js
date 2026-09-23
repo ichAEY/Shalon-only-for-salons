@@ -126,7 +126,7 @@
     /* Update only About copy/typography. */
     const aboutLead=document.querySelector('#stluxe-tanem-v13 #tn38About .tn42-lead');
     if(aboutLead){
-      aboutLead.innerHTML='<span class="br-about-brand">НАЗВАНИЕ САЛОНА</span><span class="br-about-kind">Салон красоты</span>';
+      aboutLead.innerHTML='<span class="br-about-brand">SALON NAME</span><span class="br-about-kind">Салон красоты</span>';
     }
     const aboutCopy=document.querySelector('#stluxe-tanem-v13 #tn38About .tn42-copy');
     if(aboutCopy){
@@ -138,15 +138,15 @@
     /* Rebuild only reviews: 3 stacked cards per slide, centered with neighbor edges visible. */
     const reviewsRoot=document.querySelector('#stluxe-tanem-v13 #tn13Reviews');
     if(reviewsRoot){
-      const REVIEW_URL='#';
+      const REVIEW_URL='#tn13Reviews';
       const reviewData=[["Клиент 1","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 2","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 3","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 4","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 5","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 6","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 7","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 8","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 9","Текст отзыва клиента будет добавлен при заполнении шаблона."]];
       const initial=name=>([...String(name).trim()][0]||'B').toUpperCase();
-      const card=r=>`<a class="br-review-card" href="${REVIEW_URL}" target="_blank" rel="noopener"><div class="br-review-head"><span class="br-review-avatar">${initial(r[0])}</span><span><strong class="br-review-name">${r[0]}</strong><span class="br-review-meta"><span>Google Maps</span><span class="br-review-meta-stars">★★★★★</span></span></span></div><p>${r[1]}</p><span class="br-review-open">Подробнее →</span></a>`;
+      const card=r=>`<a class="br-review-card" href="${REVIEW_URL}" target="_blank" rel="noopener"><div class="br-review-head"><span class="br-review-avatar">${initial(r[0])}</span><span><strong class="br-review-name">${r[0]}</strong><span class="br-review-meta"><span>Google Maps</span><span class="br-review-meta-stars">☆☆☆☆☆</span></span></span></div><p>${r[1]}</p><span class="br-review-open">Подробнее →</span></a>`;
       const groups=[];
       for(let i=0;i<reviewData.length;i+=3) groups.push(reviewData.slice(i,i+3));
       const page=g=>`<div class="br-review-page">${g.map(card).join('')}</div>`;
       const loop=[groups[groups.length-1],...groups,groups[0]];
-      reviewsRoot.innerHTML=`<div class="br-reviews"><p class="tn22-kicker">Отзывы</p><h2>Что говорят о нас</h2><div class="br-score"><strong>5,0</strong><div class="br-stars">★★★★★</div><div class="br-count">0 отзывов · Google Maps</div></div><div class="br-review-viewport"><div class="br-review-track">${loop.map(page).join('')}</div></div><a class="br-review-all" href="${REVIEW_URL}" target="_blank" rel="noopener">Смотреть все отзывы →</a></div>`;
+      reviewsRoot.innerHTML=`<div class="br-reviews"><p class="tn22-kicker">Отзывы</p><h2>Что говорят о нас</h2><div class="br-score"><strong>—</strong><div class="br-stars">☆☆☆☆☆</div><div class="br-count">0 отзывов · Google Maps</div></div><div class="br-review-viewport"><div class="br-review-track">${loop.map(page).join('')}</div></div><a class="br-review-all" href="${REVIEW_URL}" target="_blank" rel="noopener">Смотреть все отзывы →</a></div>`;
 
       const viewport=reviewsRoot.querySelector('.br-review-viewport');
       const track=reviewsRoot.querySelector('.br-review-track');

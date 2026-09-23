@@ -9,15 +9,15 @@
 
   var meta={
     ru:{
-      title:'Название салона — Город',
+      title:'Название салона',
       description:'Универсальный шаблон цифрового офиса салона.'
     },
     hy:{
-      title:'Название салона — Քաղաք',
+      title:'Название салона',
       description:'Универсальный шаблон цифрового офиса салона.'
     },
     en:{
-      title:'Название салона — City',
+      title:'Название салона',
       description:'Универсальный шаблон цифрового офиса салона.'
     }
   };
@@ -26,7 +26,7 @@
     ['Меню','Մենյու','Menu'],
     ['Открыть меню','Բացել մենյուն','Open menu'],
     ['Салон красоты','Գեղեցկության սրահ','Beauty salon'],
-    ['Салон красоты в самом сердце Города.','Գեղեցկության սրահ Քաղաքի սրտում։','A beauty salon in the heart of City.'],
+    ['Описание салона.','Գեղեցկության սրահ Քաղաքի սրտում։','A beauty salon in the heart of City.'],
     ['Проверяем','Ստուգում ենք','Checking'],
     ['режим работы','աշխատանքային ժամերը','opening hours'],
     ['Город,','Քաղաք,','City,'],
@@ -84,18 +84,18 @@
     ['Открыть в Google Maps','Բացել Google Maps-ում','Open in Google Maps'],
     ['Нажмите, чтобы позвонить','Սեղմեք զանգահարելու համար','Tap to call'],
     ['Написать в салон','Գրել սրահին','Message the salon'],
-    ['Ежедневно 09:00–20:00','Ամեն օր՝ 09:00–20:00','Daily 09:00–20:00'],
-    ['Без выходных','Առանց հանգստյան օրերի','Open every day'],
+    ['График работы','Աշխատանքային ժամեր','Opening hours'],
+    ['Уточняется','Կավելացվի','To be added'],
     ['Загружаем карту…','Քարտեզը բեռնվում է…','Loading map…'],
     ['Позвонить','Զանգահարել','Call'],
     ['Построить маршрут','Ստանալ երթուղին','Get directions'],
     ['Цифровой офис для салонов красоты','Թվային գրասենյակ գեղեցկության սրահների համար','Digital office for beauty salons'],
-    ['Открыто до 20:00','Բաց է մինչև 20:00','Open until 20:00'],
-    ['Закрыто до 09:00','Փակ է մինչև 09:00','Closed until 09:00'],
+    ['График работы','Աշխատանքային ժամեր','Opening hours'],
+    ['График работы','Աշխատանքային ժամեր','Opening hours'],
     ['Открыто','Բաց է','Open'],
     ['Закрыто','Փակ է','Closed'],
-    ['до 20:00','մինչև 20:00','until 20:00'],
-    ['до 09:00','մինչև 09:00','until 09:00'],
+    ['Уточняется','Կավելացվի','To be added'],
+    ['Уточняется','Կավելացվի','To be added'],
     ['О нас','Մեր մասին','About us'],
     ['Салон красоты в городе','Գեղեցկության սրահ Քաղաքում','Beauty salon in City'],
     ['Название салона — салон красоты.','Название салона — գեղեցկության սրահ Քաղաքում։','Название салона — a beauty salon in City.'],
@@ -173,6 +173,10 @@
   }
 
   function dynamicValue(source,lang){
+    var serviceMatch=source.match(/^Услуга (\d+)$/);
+    if(serviceMatch) return lang==='hy'?'Ծառայություն '+serviceMatch[1]:lang==='en'?'Service '+serviceMatch[1]:source;
+    var masterMatch=source.match(/^Мастер (\d+)$/);
+    if(masterMatch) return lang==='hy'?'Մասնագետ '+masterMatch[1]:lang==='en'?'Specialist '+masterMatch[1]:source;
     var m;
     m=source.match(/^Показать ещё (\d+) (?:услугу|услуги|услуг)$/);
     if(m) return lang==='hy'?'Ցույց տալ ևս '+m[1]+' ծառայություն':lang==='en'?'Show '+m[1]+' more services':source;
@@ -312,7 +316,7 @@
     }
 
     var masterBrand=root.querySelector('.tn22-master-brand');
-    if(masterBrand) masterBrand.textContent='НАЗВАНИЕ САЛОНА';
+    if(masterBrand) masterBrand.textContent='SALON NAME';
 
     if(currentLang==='hy'){
       var team=root.querySelector('#tn13Team');

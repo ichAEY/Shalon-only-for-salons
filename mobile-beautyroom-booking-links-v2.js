@@ -3,7 +3,7 @@
   'use strict';
   if(!window.matchMedia || !window.matchMedia('(max-width:1023px)').matches || window.matchMedia('(min-width:768px) and (hover:hover) and (pointer:fine)').matches) return;
 
-  const VIBER_URL='#';
+  const VIBER_URL='#tn13Visit';
 
   function ensureStyle(){
     if(document.getElementById('beautyroom-booking-links-v2')) return;

@@ -3,8 +3,8 @@
   'use strict';
   if(!window.matchMedia || !window.matchMedia('(max-width:1023px)').matches || window.matchMedia('(min-width:768px) and (hover:hover) and (pointer:fine)').matches) return;
 
-  const BRAND_SRC='placeholder.svg';
-  const ABOUT_SRC='placeholder.svg';
+  const BRAND_SRC='logo-placeholder.svg';
+  const ABOUT_SRC='media-placeholder.svg';
   const VIDEO_SRC='';
 
   function ensureStyle(){
@@ -84,8 +84,8 @@
     if(!brand || brand.dataset.brLogoReady==='1') return;
     brand.dataset.brLogoReady='1';
     brand.classList.add('br-logo-brand');
-    brand.setAttribute('aria-label','Название салона');
-    brand.innerHTML='<img src="'+BRAND_SRC+'" alt="Название салона" decoding="async">';
+    brand.setAttribute('aria-label','SALON NAME');
+    brand.innerHTML='<img src="'+BRAND_SRC+'" alt="SALON NAME" decoding="async">';
   }
 
   function applyHeroVideo(root){
@@ -94,7 +94,7 @@
     media.dataset.brVideoReady='1';
     media.classList.add('br-video-media');
     media.setAttribute('aria-label','Видео Название салона');
-    media.innerHTML=VIDEO_SRC?'<video class="br-hero-video" muted autoplay loop playsinline webkit-playsinline preload="metadata" poster="placeholder.svg" src="'+VIDEO_SRC+'"></video>':'<img class="br-hero-video" src="placeholder.svg" alt="Фото салона">';
+    media.innerHTML=VIDEO_SRC?'<video class="br-hero-video" muted autoplay loop playsinline webkit-playsinline preload="metadata" poster="media-placeholder.svg" src="'+VIDEO_SRC+'"></video>':'<img class="br-hero-video" src="media-placeholder.svg" alt="Фото салона">';
     const video=media.querySelector('video');
     if(video){
       video.muted=true;

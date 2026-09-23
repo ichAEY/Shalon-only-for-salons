@@ -4,19 +4,19 @@
   const desktopDevice=window.__BR_DESKTOP_DEVICE__===true || (!('__BR_DESKTOP_DEVICE__' in window) && !!window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches);
   if(!desktopDevice) return;
 
-  const PHONE='+70000000000';
+  const PHONE='';
   const ADDRESS='Город, Адрес салона';
-  const YANDEX_RU='#';
+  const YANDEX_RU='#esmeraldaDesktopContacts';
   const ROUTE=YANDEX_RU;
-  const WHATSAPP_URL='#';
+  const WHATSAPP_URL='#esmeraldaDesktopContacts';
   const YANDEX_REVIEWS=YANDEX_RU;
   const DESKTOP_REAL_REVIEWS=[["Клиент 1","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 2","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 3","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 4","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 5","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 6","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 7","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 8","Текст отзыва клиента будет добавлен при заполнении шаблона."],["Клиент 9","Текст отзыва клиента будет добавлен при заполнении шаблона."]];
-  const PORTFOLIO=Array.from({length:7},()=>({src:'placeholder.svg',alt:'Работа салона'}));
+  const PORTFOLIO=Array.from({length:7},()=>({src:'media-placeholder.svg',alt:'Работа салона'}));
   const DESKTOP_GALLERY_GROUPS={
-    'Салон':Array.from({length:2},()=>({src:'placeholder.svg',alt:'Фото салона'})),
-    'Ногти':Array.from({length:9},()=>({src:'placeholder.svg',alt:'Работа салона'})),
-    'Волосы':Array.from({length:7},()=>({src:'placeholder.svg',alt:'Работа салона'})),
-    'Макияж':Array.from({length:3},()=>({src:'placeholder.svg',alt:'Работа салона'}))
+    'Салон':Array.from({length:2},()=>({src:'media-placeholder.svg',alt:'Фото салона'})),
+    'Ногти':Array.from({length:9},()=>({src:'media-placeholder.svg',alt:'Работа салона'})),
+    'Волосы':Array.from({length:7},()=>({src:'media-placeholder.svg',alt:'Работа салона'})),
+    'Макияж':Array.from({length:3},()=>({src:'media-placeholder.svg',alt:'Работа салона'}))
   };
   const DESKTOP_GALLERY=Object.values(DESKTOP_GALLERY_GROUPS).flat().map(x=>x.src);
   const SERVICE_DATA={
@@ -257,9 +257,9 @@
       "Маникюр"
     ],
     "work": [
-      "placeholder.svg",
-      "placeholder.svg",
-      "placeholder.svg"
+      "media-placeholder.svg",
+      "media-placeholder.svg",
+      "media-placeholder.svg"
     ]
   },
   {
@@ -270,9 +270,9 @@
       "Волосы"
     ],
     "work": [
-      "placeholder.svg",
-      "placeholder.svg",
-      "placeholder.svg"
+      "media-placeholder.svg",
+      "media-placeholder.svg",
+      "media-placeholder.svg"
     ]
   },
   {
@@ -1846,7 +1846,7 @@
     opacity:.92!important;
     filter:none!important;
     transform:none!important;
-    background-image:url('placeholder.svg')!important;
+    background-image:url('media-placeholder.svg')!important;
     background-repeat:no-repeat!important;
     background-size:1648px auto!important;
     background-position:left bottom!important;
@@ -2290,7 +2290,7 @@
     right:-26px!important;
     bottom:-2px!important;
     height:150px!important;
-    background:linear-gradient(180deg,rgba(240,232,225,0) 0%,rgba(240,232,225,.60) 48%,#f0e8e1 90%,#f0e8e1 100%)!important;
+    background:linear-gradient(180deg,rgba(240,232,22—) 0%,rgba(240,232,225,.60) 48%,#f0e8e1 90%,#f0e8e1 100%)!important;
     pointer-events:none!important;
   }
   .std-copy-inner{
@@ -7350,8 +7350,8 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
   root.innerHTML=`
     <header class="std-header">
       <a class="std-header-brand" href="#esmeraldaDesktopTop" aria-label="Название салона">
-        <span class="std-header-brand-main">Название салона</span>
-        <span class="std-header-brand-sub">by салон</span>
+        <span class="std-header-brand-main">SALON NAME</span>
+        <span class="std-header-brand-sub">BEAUTY STUDIO</span>
       </a>
       <div class="std-lang-switch std-lang-switch-under-brand" role="group" aria-label="Language"><button type="button" data-desktop-lang="ru">RU</button><span class="sep">|</span><button type="button" data-desktop-lang="en">EN</button><span class="sep">|</span><button type="button" data-desktop-lang="hy">HY</button></div>
       <nav class="std-nav" aria-label="Основная навигация">
@@ -7363,9 +7363,9 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
       </nav>
       <div class="std-header-right">
         <div class="std-lang-switch std-lang-switch-placeholder" aria-hidden="true"></div>
-        <a class="std-phone" href="tel:${PHONE}" aria-label="Позвонить в Название салона">
+        <a class="std-phone" href="#esmeraldaDesktopContacts" aria-disabled="true" aria-label="Позвонить в Название салона">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.83 16.57a1 1 0 0 0 1.21-.3l.36-.47A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.47.35a1 1 0 0 0-.29 1.23 14 14 0 0 0 6.39 6.39Z" fill="currentColor"/></svg>
-          <span>+7 000 000-00-00</span>
+          <span>Телефон салона</span>
         </a>
         <button class="std-header-book" id="stdHeaderBookBtn" type="button">Записаться</button>
       </div>
@@ -7376,10 +7376,10 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
         <div class="std-hero-frame">
           <div class="std-copy-inner">
           <p class="std-hero-kicker">Салон красоты</p>
-          <h1 class="std-logo">НАЗВАНИЕ САЛОНА</h1>
-          <div class="std-logo-sub">by салон</div>
+          <h1 class="std-logo">SALON NAME</h1>
+          <div class="std-logo-sub">BEAUTY STUDIO</div>
 
-          <p class="std-tagline">Салон красоты в самом сердце Города.</p>
+          <p class="std-tagline">Описание салона.</p>
 
           <div class="std-meta">
             <div class="std-meta-item">
@@ -7391,7 +7391,7 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
 
             <span class="std-meta-divider" aria-hidden="true"></span>
 
-            <a class="std-meta-item" href="${YANDEX_RU}" target="_blank" rel="noopener">
+            <a class="std-meta-item" href="#esmeraldaDesktopContacts" aria-disabled="true">
               <span class="std-meta-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.1" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
               </span>
@@ -7415,9 +7415,7 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
       </div>
 
       <div class="std-hero-photo">
-        <video id="stdHeroVideo" muted autoplay loop playsinline webkit-playsinline preload="metadata" poster="placeholder.svg" aria-label="Видео Название салона">
-          <source src="SaveClip.App_AQMAwV91MkTpBiNct73I425uzlW_h6abP65-n07hUj4AwohUq5WlrKaE3TMQPtiaQvi2o_TdNi1Of7laSvuKsDXA3ykliQBk9mqD10k.mp4" type="video/mp4">
-        </video>
+        <video id="stdHeroVideo" muted autoplay loop playsinline webkit-playsinline preload="metadata" poster="media-placeholder.svg" aria-label="Медиа салона"></video>
       </div>
     </section>
 
@@ -7426,7 +7424,7 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
         <div class="std-portfolio-head">
           <p class="std-portfolio-kicker">Портфолио</p>
           <h2 class="std-portfolio-title" id="esmeraldaDesktopPortfolioTitle">Наши работы</h2>
-          <p class="std-portfolio-copy">Вдохновляйтесь реальными результатами наших мастеров и выбирайте свой идеальный образ.</p>
+          <p class="std-portfolio-copy">Фотографии и работы салона будут добавлены при заполнении шаблона.</p>
         </div>
         <div class="std-portfolio-grid">
           ${PORTFOLIO.map((item,i)=>`<button class="std-work" type="button" data-portfolio-index="${i}" aria-label="Открыть фотографию"><img src="${item.src}" alt="${item.alt}" loading="${i<4?'eager':'lazy'}"></button>`).join('')}
@@ -7448,10 +7446,10 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
                 </span>
                 <span class="dct-service-sticky-copy">
                   <b id="stdStickyServiceStatus">Закрыто</b>
-                  <small id="stdStickyServiceStatusSub">до 09:00</small>
+                  <small id="stdStickyServiceStatusSub">Уточняется</small>
                 </span>
               </div>
-              <a class="dct-service-sticky-row dct-service-sticky-route" href="${ROUTE}" target="_blank" rel="noopener" aria-label="Построить маршрут в Google Maps">
+              <a class="dct-service-sticky-row dct-service-sticky-route" href="#esmeraldaDesktopContacts" aria-disabled="true" aria-label="Построить маршрут в Google Maps">
                 <span class="dct-service-sticky-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M19 10c0 5.2-7 10-7 10s-7-4.8-7-10a7 7 0 1 1 14 0Z"></path><circle cx="12" cy="10" r="2.2"></circle></svg>
                 </span>
@@ -7501,13 +7499,13 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
           <div class="mct-about-card">
             <div class="mct-about-portrait-wrap">
               <figure class="mct-about-portrait">
-                <img src="placeholder.svg" alt="Название салона" loading="lazy">
-                <div class="dct-about-rating"><span class="dct-about-rating-star">★</span><strong>5,0</strong><span>рейтинг салона</span></div>
+                <img src="media-placeholder.svg" alt="Название салона" loading="lazy">
+                <div class="dct-about-rating"><span class="dct-about-rating-star">★</span><strong>—</strong><span>рейтинг салона</span></div>
               </figure>
             </div>
             <div class="mct-about-copy">
-              <p class="mct-about-lead"><span class="dct-about-brand">Название салона</span><span class="dct-about-kind">Салон красоты в городе</span></p>
-              <p class="dct-about-copy">Здесь можно спокойно выбрать нужные процедуры и доверить уход мастерам разных направлений. Мы ценим аккуратную работу, комфорт и внимательное отношение к каждому гостю.</p>
+              <p class="mct-about-lead"><span class="dct-about-brand">SALON NAME</span><span class="dct-about-kind">Салон красоты</span></p>
+              <p class="dct-about-copy">Описание салона будет добавлено при заполнении шаблона.</p>
               <div class="dct-about-amenities">
                 <div class="dct-about-amenities-grid">
                   <article><strong>Разные направления</strong><span>Маникюр, волосы, брови и косметология.</span></article>
@@ -7520,7 +7518,7 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
         </article>
 
         <aside class="br-team-panel" id="esmeraldaDesktopTeam" aria-labelledby="stdTeamTitle">
-          <p class="std-team-kicker">Мастера Название салона</p>
+          <p class="std-team-kicker">Наша команда</p>
           <p class="std-team-subtitle">Нажмите на мастера, чтобы открыть страницу специалиста.</p>
           <div class="std-team-track" id="stdTeamTrack">
             ${TEAM_MASTERS.map(master=>`
@@ -7541,8 +7539,8 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
         <p class="std-reviews-kicker">Отзывы</p>
         <h2 class="std-reviews-title" id="stdReviewsTitle">Что говорят о нас</h2>
         <div class="std-reviews-score">
-          <strong>5,0</strong>
-          <div class="std-reviews-stars" aria-label="5 звёзд">★★★★★</div>
+          <strong>—</strong>
+          <div class="std-reviews-stars" aria-label="5 звёзд">☆☆☆☆☆</div>
           <div class="std-reviews-count">Отзывы на Google Maps</div>
         </div>
       </div>
@@ -7551,13 +7549,13 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
         <div class="std-reviews-loop">
           <div class="std-reviews-set">
             ${DESKTOP_REAL_REVIEWS.map(r=>`
-              <a class="std-review-card" href="${YANDEX_REVIEWS}#:~:text=${encodeURIComponent(r[1])}" target="_blank" rel="noopener">
+              <a class="std-review-card" href="#esmeraldaDesktopReviews" target="_blank" rel="noopener">
                 <div class="std-review-head">
                   <span class="std-review-avatar">${([...(String(r[0]).trim())][0]||'S').toUpperCase()}</span>
                   <span>
                     <strong class="std-review-name">${r[0]}</strong>
                     <span class="std-review-meta">Google Maps</span>
-                    <span class="std-review-stars">★★★★★</span>
+                    <span class="std-review-stars">☆☆☆☆☆</span>
                   </span>
                 </div>
                 <p class="std-review-text">${r[1]}</p>
@@ -7567,13 +7565,13 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
           </div>
           <div class="std-reviews-set" aria-hidden="true">
             ${DESKTOP_REAL_REVIEWS.map(r=>`
-              <a class="std-review-card" href="${YANDEX_REVIEWS}#:~:text=${encodeURIComponent(r[1])}" target="_blank" rel="noopener" tabindex="-1">
+              <a class="std-review-card" href="#esmeraldaDesktopReviews" target="_blank" rel="noopener" tabindex="-1">
                 <div class="std-review-head">
                   <span class="std-review-avatar">${([...(String(r[0]).trim())][0]||'S').toUpperCase()}</span>
                   <span>
                     <strong class="std-review-name">${r[0]}</strong>
                     <span class="std-review-meta">Google Maps</span>
-                    <span class="std-review-stars">★★★★★</span>
+                    <span class="std-review-stars">☆☆☆☆☆</span>
                   </span>
                 </div>
                 <p class="std-review-text">${r[1]}</p>
@@ -7598,46 +7596,46 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
           </div>
           <div class="std-contact-status" id="stdContactStatus">
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3.2 1.8"></path></svg>
-            <span id="stdContactStatusText">Закрыто до 09:00</span>
+            <span id="stdContactStatusText">График работы</span>
           </div>
         </div>
 
         <div class="std-contact-body">
           <div class="std-contact-list">
-            <a class="std-contact-card" href="${YANDEX_RU}" target="_blank" rel="noopener">
+            <a class="std-contact-card" href="#esmeraldaDesktopContacts" aria-disabled="true">
               <span class="std-contact-card-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6.5-5.4 6.5-11a6.5 6.5 0 1 0-13 0c0 5.6 6.5 11 6.5 11Z"></path><circle cx="12" cy="10" r="2.2"></circle></svg>
               </span>
-              <span class="std-contact-card-copy"><strong class="std-contact-card-title">Город, Адрес салона</strong><span class="std-contact-card-sub">Армения · открыть в Google Maps</span></span>
+              <span class="std-contact-card-copy"><strong class="std-contact-card-title">Город, Адрес салона</strong><span class="std-contact-card-sub">Адрес салона</span></span>
             </a>
 
-            <a class="std-contact-card" href="tel:${PHONE}">
+            <a class="std-contact-card" href="#esmeraldaDesktopContacts" aria-disabled="true">
               <span class="std-contact-card-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h3l1.3 4-2 1.5c1 2 2.6 3.6 4.6 4.6l1.5-2L19 13.5v3c0 1.1-.9 2-2 2C10.4 18.5 5.5 13.6 5.5 7A2 2 0 0 1 7 4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
-              <span class="std-contact-card-copy"><strong class="std-contact-card-title">+7 000 000-00-00</strong><span class="std-contact-card-sub">Нажмите, чтобы позвонить</span></span>
+              <span class="std-contact-card-copy"><strong class="std-contact-card-title">Телефон салона</strong><span class="std-contact-card-sub">Контакт будет добавлен</span></span>
             </a>
 
-            <a class="std-contact-card" href="${WHATSAPP_URL}" target="_blank" rel="noopener">
+            <a class="std-contact-card" href="#esmeraldaDesktopContacts" aria-disabled="true">
               <span class="std-contact-card-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5h14v10H9l-4 3v-13Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 9.2c.8 2.2 2.1 3.5 4.3 4.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
               </span>
-              <span class="std-contact-card-copy"><strong class="std-contact-card-title">Мессенджер</strong><span class="std-contact-card-sub">Написать в салон</span></span>
+              <span class="std-contact-card-copy"><strong class="std-contact-card-title">Мессенджер</strong><span class="std-contact-card-sub">Контакт будет добавлен</span></span>
             </a>
 
             <div class="std-contact-card static">
               <span class="std-contact-card-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3.2 1.8"></path></svg>
               </span>
-              <span class="std-contact-card-copy"><strong class="std-contact-card-title">Ежедневно 09:00–20:00</strong><span class="std-contact-card-sub">Без выходных</span></span>
+              <span class="std-contact-card-copy"><strong class="std-contact-card-title">График работы</strong><span class="std-contact-card-sub">Уточняется</span></span>
             </div>
           </div>
 
           <div class="std-contact-right">
-            <div class="std-contact-map"><iframe title="Карта Название салона" loading="eager" src="about:blank"></iframe></div>
+            <div class="std-contact-map"><iframe title="Карта салона" loading="eager" src="about:blank"></iframe></div>
             <div class="std-contact-actions">
-              <a class="std-contact-action-btn std-contact-call" href="tel:${PHONE}">Позвонить</a>
-              <a class="std-contact-action-btn std-contact-route" href="${ROUTE}" target="_blank" rel="noopener">Построить маршрут</a>
+              <a class="std-contact-action-btn std-contact-call" href="#esmeraldaDesktopContacts" aria-disabled="true">Позвонить</a>
+              <a class="std-contact-action-btn std-contact-route" href="#esmeraldaDesktopContacts" aria-disabled="true">Построить маршрут</a>
             </div>
           </div>
         </div>
@@ -7668,7 +7666,7 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
         <button class="std-book-close" id="stdBookClose" type="button" aria-label="Закрыть">×</button>
         <p class="std-services-kicker">Запись</p><h3>Как вам удобнее записаться?</h3><p>Выберите удобный способ связи.</p>
         <div class="std-book-options">
-          <a href="tel:+70000000000"><span>Телефон</span><span>+7 000 000-00-00 →</span></a>
+          <a href="#visit" aria-disabled="true"><span>Телефон</span><span>Телефон салона →</span></a>
           <a href="#"><span>Мессенджер</span><span>Написать →</span></a>
           <a href="#" target="_blank" rel="noopener"><span>Google Maps</span><span>Открыть →</span></a>
         </div>
@@ -8209,7 +8207,7 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
       cosmetology:'Косметология и профессиональный уход за кожей.',
       brows:'Брови и ресницы — форма, ламинирование и уход.'
     };
-    return map[master.id]||'Специалист Название салона по своему направлению.';
+    return map[master.id]||'Описание специалиста.';
   }
   function paintDesktopMasterTab(){
     const target=masterPageContent.querySelector('.std-master-tab-content');
@@ -8232,7 +8230,7 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
     }
   }
   function paintDesktopMaster(master){
-    masterPageContent.innerHTML='<div class="std-master-profile"><div class="std-master-avatar">'+TEAM_AVATAR+'</div><h2>'+master.name+'</h2><p>'+master.role+'</p><div class="std-master-profile-rating"><b>★★★★★</b> · Название салона</div><div class="std-master-profile-cats">'+(master.cats||[]).map(cat=>'<span>'+cat+'</span>').join('')+'</div></div><div class="std-master-tabs">'+['Профиль','Услуги','Портфолио','Отзывы'].map(tab=>'<button type="button" data-master-tab="'+tab+'" class="'+(tab===activeDesktopMasterTab?'active':'')+'">'+tab+'</button>').join('')+'</div><div class="std-master-tab-content"></div>';
+    masterPageContent.innerHTML='<div class="std-master-profile"><div class="std-master-avatar">'+TEAM_AVATAR+'</div><h2>'+master.name+'</h2><p>'+master.role+'</p><div class="std-master-profile-rating"><b>☆☆☆☆☆</b> · SALON NAME</div><div class="std-master-profile-cats">'+(master.cats||[]).map(cat=>'<span>'+cat+'</span>').join('')+'</div></div><div class="std-master-tabs">'+['Профиль','Услуги','Портфолио','Отзывы'].map(tab=>'<button type="button" data-master-tab="'+tab+'" class="'+(tab===activeDesktopMasterTab?'active':'')+'">'+tab+'</button>').join('')+'</div><div class="std-master-tab-content"></div>';
     masterPageContent.querySelectorAll('[data-master-tab]').forEach(btn=>btn.onclick=()=>{
       activeDesktopMasterTab=btn.dataset.masterTab;
       masterPageContent.querySelectorAll('[data-master-tab]').forEach(x=>x.classList.toggle('active',x===btn));
@@ -8282,7 +8280,7 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
     ['Здесь можно спокойно выбрать нужные процедуры и доверить уход мастерам разных направлений. Мы ценим аккуратную работу, комфорт и внимательное отношение к каждому гостю.','Այստեղ կարող եք հանգիստ ընտրել անհրաժեշտ ծառայությունները և ձեր խնամքը վստահել տարբեր ուղղությունների մասնագետների։ Մենք կարևորում ենք կոկիկ աշխատանքը, հարմարավետությունն ու յուրաքանչյուր հյուրի նկատմամբ ուշադիր վերաբերմունքը։','Here you can comfortably choose the services you need and trust your care to specialists in different fields. We value precise work, comfort and attentive service for every guest.'],
     ['Несколько направлений в одном салоне','Մի քանի ուղղություն մեկ սրահում','Several services in one salon'],
     ['Комфортная атмосфера','Հարմարավետ մթնոլորտ','Comfortable atmosphere'],['Индивидуальный подход','Անհատական մոտեցում','Personal approach'],
-    ['Наша команда','Մեր թիմը','Our team'],['Мастера Название салона','Название салона-ի մասնագետները','Название салона specialists'],
+    ['Наша команда','Մեր թիմը','Our team'],['Наша команда','Название салона-ի մասնագետները','Название салона specialists'],
     ['Нажмите на мастера, чтобы открыть отдельную страницу специалиста.','Ընտրեք մասնագետին՝ նրա էջը բացելու համար։','Select a specialist to open their profile.'],
     ['Nail-мастер','Մատնահարդարման վարպետ','Nail specialist'],['Парикмахер','Վարսահարդար','Hair stylist'],['Косметолог','Կոսմետոլոգ','Cosmetologist'],
     ['Brow & Lash-мастер','Հոնքերի և թարթիչների վարպետ','Brow & lash specialist'],
@@ -8291,7 +8289,7 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
     ['Смотреть все отзывы →','Դիտել բոլոր կարծիքները →','View all reviews →'],['Ждём вас','Սպասում ենք ձեզ','We look forward to seeing you'],['Город, Адрес салона','Քաղաք, Սրահի հասցե','City, Адрес салона'],
     ['Армения · открыть в Google Maps','Հայաստան · բացել Google Maps-ում','Armenia · open in Google Maps'],
     ['Нажмите, чтобы позвонить','Սեղմեք զանգահարելու համար','Click to call'],['Написать в салон','Գրել սրահին','Message the salon'],
-    ['Ежедневно 09:00–20:00','Ամեն օր՝ 09:00–20:00','Daily 09:00–20:00'],['Без выходных','Առանց հանգստյան օրերի','Open every day'],
+    ['График работы','Աշխատանքային ժամեր','Opening hours'],['Уточняется','Կավելացվի','To be added'],
     ['Цифровой офис для салонов красоты','Թվային գրասենյակ գեղեցկության սրահների համար','Digital office for beauty salons'],['Создано в','Ստեղծված է','Created in'],['Позвонить','Զանգահարել','Call'],['Построить маршрут','Կառուցել երթուղի','Get directions'],['Всё необходимое для комфортного визита','Ամեն ինչ հարմարավետ այցի համար','Everything for a comfortable visit'],['Салон красоты в городе','Գեղեցկության սրահ Քաղաքում','Beauty salon in City'],['Здесь можно спокойно выбрать нужные процедуры и доверить уход мастерам разных направлений. Мы ценим аккуратную работу, комфорт и внимательное отношение к каждому гостю.','Այստեղ կարող եք հանգիստ ընտրել անհրաժեշտ ծառայությունները և վստահել խնամքը տարբեր ուղղությունների մասնագետներին։ Մենք կարևորում ենք ճշգրիտ աշխատանքը, հարմարավետությունն ու յուրաքանչյուր հյուրի նկատմամբ ուշադիր վերաբերմունքը։','Choose the services you need and trust your care to specialists across different beauty fields. We value precise work, comfort, and attentive service for every guest.'],['Маникюр, волосы, брови и косметология.','Մատնահարդարում, մազեր, հոնքեր և կոսմետոլոգիա։','Nails, hair, brows and cosmetology.'],['Спокойная атмосфера и внимание к каждому гостю.','Հանգիստ մթնոլորտ և ուշադրություն յուրաքանչյուր հյուրի նկատմամբ։','A calm atmosphere and personal attention.'],['Связь по телефону или Мессенджер без лишних шагов.','Կապ հեռախոսով կամ Мессенджер-ով՝ առանց ավելորդ քայլերի։','Direct booking by phone or Мессенджер.'],['Разные направления','Տարբեր ուղղություններ','Different services'],['Комфорт','Հարմարավետություն','Comfort'],['Прямая запись','Ուղիղ ամրագրում','Direct booking'],
     ['Запись','Ամրագրում','Booking'],['Как вам удобнее записаться?','Ինչպե՞ս է ձեզ հարմար ամրագրել։','How would you like to book?'],
     ['Выберите удобный способ связи.','Ընտրեք ձեզ հարմար կապի տարբերակը։','Choose the most convenient way to contact us.'],
@@ -8315,8 +8313,8 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
     ['Удаление волос нитью','Մազահեռացում թելով','Threading hair removal'],['Шугаринг','Շուգարինգ','Sugaring'],
     ['Электроэпиляция игловая','Ասեղային էլեկտրոէպիլյացիա','Needle electrolysis'],['Восковая эпиляция','Մոմային էպիլյացիա','Waxing'],
     ['Прокалывание ушей','Ականջների ծակում','Ear piercing'],
-    ['Открыто','Բաց է','Open'],['Закрыто','Փակ է','Closed'],['до 20:00','մինչև 20:00','until 20:00'],['до 09:00','մինչև 09:00','until 09:00'],
-    ['Открыто до 20:00','Բաց է մինչև 20:00','Open until 20:00'],['Закрыто до 09:00','Փակ է մինչև 09:00','Closed until 09:00']
+    ['Открыто','Բաց է','Open'],['Закрыто','Փակ է','Closed'],['Уточняется','Կավելացվի','To be added'],['Уточняется','Կավելացվի','To be added'],
+    ['График работы','Աշխատանքային ժամեր','Opening hours'],['График работы','Աշխատանքային ժամեր','Opening hours']
   ];
   const desktopLangIndex={ru:0,hy:1,en:2};
   const desktopDirect={};
@@ -8457,28 +8455,16 @@ html,body,#esmeralda-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:
   }
 
   function updateStatus(){
-    const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/City',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
-    const hour=Number(parts.find(p=>p.type==='hour')?.value||0),minute=Number(parts.find(p=>p.type==='minute')?.value||0),mins=hour*60+minute,isOpen=mins>=540&&mins<1200;
     const main=document.getElementById('stdStatusMain'),sub=document.getElementById('stdStatusSub');
-    if(main&&sub){
-      main.textContent=desktopTrText(isOpen?'Открыто':'Закрыто');
-      sub.textContent=desktopTrText(isOpen?'до 20:00':'до 09:00');
-      main.style.color=isOpen?'#3f8750':'#a45e64';
-    }
+    if(main){main.textContent='График';main.className='std-status-main';main.style.color=''}
+    if(sub)sub.textContent='Уточняется';
     const stickyStatus=document.getElementById('stdStickyServiceStatus'),stickyStatusSub=document.getElementById('stdStickyServiceStatusSub'),stickyCard=document.getElementById('stdStickyServiceCard');
-    if(stickyStatus&&stickyStatusSub){
-      stickyStatus.textContent=desktopTrText(isOpen?'Открыто':'Закрыто');
-      stickyStatusSub.textContent=desktopTrText(isOpen?'до 20:00':'до 09:00');
-      stickyCard?.classList.toggle('is-open',isOpen);
-      stickyCard?.classList.toggle('is-closed',!isOpen);
-    }
+    if(stickyStatus)stickyStatus.textContent='График';
+    if(stickyStatusSub)stickyStatusSub.textContent='Уточняется';
+    if(stickyCard)stickyCard.classList.remove('is-open','is-closed');
     const contactStatus=document.getElementById('stdContactStatus'),contactStatusText=document.getElementById('stdContactStatusText');
-    if(contactStatus&&contactStatusText){
-      contactStatusText.textContent=desktopTrText(isOpen?'Открыто до 20:00':'Закрыто до 09:00');
-      contactStatus.classList.toggle('open',isOpen);
-      contactStatus.classList.toggle('closed',!isOpen);
-    }
+    if(contactStatus)contactStatus.classList.remove('open','closed');
+    if(contactStatusText)contactStatusText.textContent='График работы';
   }
   updateStatus();
-  setInterval(updateStatus,60000);
 })();
