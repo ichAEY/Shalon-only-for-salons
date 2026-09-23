@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f8f4ee"><title>Название салона — цифровой офис</title><meta name="description" content="Универсальный шаблон цифрового офиса салона.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript><link rel="preload" href="mobile-beautyroom-base.js?v=20260918-gallery-v1" as="script"><link rel="preload" href="logo-placeholder.svg" as="image" type="image/svg+xml" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript><link rel="preload" href="mobile.js" as="script"><link rel="preload" href="logo-placeholder.svg" as="image" type="image/svg+xml" fetchpriority="high">
 <style>
 *{box-sizing:border-box}html{scroll-behavior:smooth;background:#f8f4ee}body{margin:0;background:#f8f4ee;color:#171513;font-family:Manrope,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}button,a{font:inherit;color:inherit}a{text-decoration:none}button{cursor:pointer}.no-scroll{overflow:hidden!important}.desktop{display:none}.mobile{display:block;background:#f8f4ee}.ph{position:relative;overflow:hidden;background:linear-gradient(145deg,#dedbd8,#c9c5c1)}.ph:before{content:"";position:absolute;left:50%;top:50%;width:116px;height:116px;border:1px solid rgba(54,48,44,.13);border-radius:50%;transform:translate(-50%,-50%)}.ph:after{content:"ФОТО";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:600 9px/1 Manrope;letter-spacing:.22em;color:#8b8580}
 .br-boot-intro{position:fixed;z-index:9999;inset:0;display:grid;place-items:center;background:#f8f4ee;pointer-events:auto;animation:brBootIntro 1.55s cubic-bezier(.22,.72,.28,1) forwards}.br-boot-intro img{display:block;width:min(50vw,220px);max-width:220px;max-height:38svh;height:auto;object-fit:contain;-webkit-user-drag:none;user-select:none}@keyframes brBootIntro{0%,48%{opacity:1;visibility:visible;filter:blur(0);transform:scale(1);pointer-events:auto}99%{opacity:0;visibility:visible;filter:blur(18px);transform:scale(1.055);pointer-events:none}100%{opacity:0;visibility:hidden;filter:blur(18px);transform:scale(1.055);pointer-events:none}}@media(min-width:768px){.br-boot-intro{display:grid;animation:brBootIntroDesktop 2.25s cubic-bezier(.22,.72,.28,1) forwards}.br-boot-intro img{width:min(36vw,330px);max-width:330px}@keyframes brBootIntroDesktop{0%,55%{opacity:1;visibility:visible;filter:blur(0);transform:scale(1);pointer-events:auto}99%{opacity:0;visibility:visible;filter:blur(14px);transform:scale(1.035);pointer-events:none}100%{opacity:0;visibility:hidden;filter:blur(14px);transform:scale(1.035);pointer-events:none}}}@media(prefers-reduced-motion:reduce){.br-boot-intro{animation-duration:.01ms}}@media(min-width:768px){html.br-booting body>*:not(.br-boot-intro):not(script){visibility:hidden!important}}
@@ -20,7 +20,7 @@
 .viewer{position:fixed;z-index:190;inset:0;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(27,20,20,.90);backdrop-filter:blur(9px);touch-action:none;overscroll-behavior:contain}.viewer.open{display:flex}.viewer-frame{position:relative;width:min(100%,520px);height:min(72dvh,640px);background:transparent;overflow:visible;touch-action:none}.viewer-canvas{position:absolute;inset:0;overflow:hidden;border-radius:14px;background:#151312;box-shadow:0 18px 54px rgba(0,0,0,.28)}.viewer-photo{position:absolute;inset:0;width:100%;height:100%}.viewer-photo.ph:before{border-color:rgba(255,255,255,.15)}.viewer-photo.ph:after{color:#a99e97}.viewer-top{position:absolute;z-index:5;top:-52px;left:0;right:0;display:flex;justify-content:flex-end}.viewer-close{width:42px;height:42px;border:1px solid rgba(255,255,255,.22);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:22px}.viewer-count{position:absolute;z-index:5;right:0;bottom:-34px;color:#fff;font:500 10px/1 Manrope}.viewer-gallery-btn{position:absolute;z-index:8;left:50%;bottom:-88px;transform:translateX(-50%);width:min(100%,300px);height:46px;border:1px solid rgba(255,255,255,.22);border-radius:13px;background:rgba(255,255,255,.10);backdrop-filter:blur(12px);color:#fff;display:flex;align-items:center;justify-content:center;gap:9px;font:600 12px/1 Manrope}.viewer-gallery-btn[hidden]{display:none}
 @media(min-width:768px){.mobile{display:none}.desktop{display:block;padding:80px;text-align:center}.desktop h1{font:500 72px/1 'Cormorant Garamond',serif}}
 </style>
-<style id="br-device-layout-boundary">
+<style id="salon-device-layout">
 html[data-br-device="mobile"] .mobile{display:block!important}
 html[data-br-device="mobile"] .desktop{display:none!important}
 html[data-br-device="mobile"] .br-boot-intro{animation-name:brBootIntro!important;animation-duration:1.55s!important}
@@ -84,27 +84,10 @@ document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;if(viewer.cla
 
 <script>
 (()=>{
-  if(!window.__BR_DESKTOP_DEVICE__)return;
   const script=document.createElement('script');
-  script.src='desktop-beautyroom-v1.js?v=20260923-final-v69';
+  script.src=window.__BR_DESKTOP_DEVICE__?'desktop.js':'mobile.js';
   script.async=false;
   document.body.appendChild(script);
-})();
-</script>
-<script>
-(()=>{
-  if(window.__BR_DESKTOP_DEVICE__)return;
-  [
-    'mobile-beautyroom-current.js?v=20260918-overlay-v2',
-    'mobile-beautyroom-booking-links-v2.js?v=20260918-overlay-v1',
-    'mobile-beautyroom-media-v1.js?v=20260918-stability-v3',
-    'mobile-beautyroom-i18n-v1.js?v=20260918-3'
-  ].forEach(src=>{
-    const script=document.createElement('script');
-    script.src=src;
-    script.async=false;
-    document.body.appendChild(script);
-  });
 })();
 </script>
 </body></html>
