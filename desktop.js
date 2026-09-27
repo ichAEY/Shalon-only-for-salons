@@ -8440,3 +8440,40 @@ html,body,#salon-desktop-v1{scroll-behavior:auto!important;scroll-snap-type:none
   }
   updateStatus();
 })();
+
+
+/* Final laptop refinements: keep every service duration on one rail and
+   preserve the gallery-button hover while switching its foreground to white. */
+(function(){
+  'use strict';
+  if(!window.__BR_DESKTOP_DEVICE__) return;
+  const style=document.createElement('style');
+  style.id='salon-desktop-laptop-refinements';
+  style.textContent=`
+    @media(min-width:768px){
+      #salonDesktopServices .dct-service-card-meta>small{
+        grid-column:2!important;
+        grid-row:1!important;
+        align-self:center!important;
+        justify-self:start!important;
+        transform:translateX(-2mm)!important;
+      }
+      #salonDesktopServices .dct-service-card-variant-meta{
+        display:grid!important;
+        grid-template-columns:112px 136px!important;
+        column-gap:18px!important;
+        align-items:center!important;
+      }
+      #salonDesktopServices .dct-service-card-variant-meta>small{
+        justify-self:start!important;
+        transform:translateX(-2mm)!important;
+        white-space:nowrap!important;
+      }
+      #salonDesktopServices #stdStickyGalleryOpen:hover,
+      #salonDesktopServices #stdStickyGalleryOpen:hover>span{
+        color:#fff!important;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+})();

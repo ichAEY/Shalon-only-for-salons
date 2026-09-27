@@ -2066,3 +2066,41 @@ services.insertAdjacentElement('afterend',about);
 
   start();
 })();
+
+
+/* Final mobile hero refinements: softer card edges, an earlier visual fade,
+   and a slightly more left-aligned top brand. */
+(function(){
+  'use strict';
+  if(!window.matchMedia || !window.matchMedia('(max-width:1023px)').matches || window.matchMedia('(min-width:768px) and (hover:hover) and (pointer:fine)').matches) return;
+  const style=document.createElement('style');
+  style.id='salon-mobile-hero-refinements';
+  style.textContent=`
+    @media(max-width:1023px){
+      #salon-mobile .tn22-top{
+        padding-left:12px!important;
+      }
+      #salon-mobile .tn22-brand{
+        margin-left:-4px!important;
+      }
+      #salon-mobile .tn22-media:after{
+        height:178px!important;
+        background:linear-gradient(180deg,rgba(248,244,238,0) 0%,rgba(248,244,238,.16) 34%,rgba(248,244,238,.62) 66%,#f8f4ee 96%)!important;
+      }
+      #salon-mobile .tn22-card{
+        border:0!important;
+        border-radius:18px 18px 0 0!important;
+        background:linear-gradient(180deg,rgba(249,246,241,.94) 0%,rgba(249,246,241,.975) 20%,rgba(248,244,238,.96) 48%,#f7f2eb 66%)!important;
+        box-shadow:0 -1px 12px rgba(47,37,31,.04),0 -1px 3px rgba(47,37,31,.025)!important;
+      }
+      #salon-mobile .tn22-card:after{
+        left:-15px!important;
+        right:-15px!important;
+        bottom:-1px!important;
+        height:108px!important;
+        background:linear-gradient(180deg,rgba(247,242,235,0) 0%,rgba(247,242,235,.64) 42%,#f7f2eb 78%)!important;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+})();
